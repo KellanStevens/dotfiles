@@ -1,7 +1,6 @@
-
 $DebloatChoice = Read-Host "Do you want to Debloat Windows? Yes[y]/No[n]" # Asks user if they want to debloat windows or not
 
-if ($DebloatChoice -eq "y" -or $DebloatChoice -eq "Y")
+if ($DebloatChoice -is "y" -or $DebloatChoice -is "Y")
 {
 
 Write-Host "Creating Restore Point incase something bad happens" 
@@ -217,11 +216,11 @@ $Bloatware = @(
     "*Hulu*"
     "*HiddenCity*"
     "*AdobePhotoshopExpress*"
-                    
+    "*Microsoft.BingWeather*"               
+    
     #Optional: Typically not removed but you can if you need to for some reason
     #"*Microsoft.Advertising.Xaml_10.1712.5.0_x64__8wekyb3d8bbwe*"
     #"*Microsoft.Advertising.Xaml_10.1712.5.0_x86__8wekyb3d8bbwe*"
-    #"*Microsoft.BingWeather*"
     #"*Microsoft.MSPaint*"
     #"*Microsoft.MicrosoftStickyNotes*"
     #"*Microsoft.Windows.Photos*"
@@ -296,7 +295,7 @@ foreach ($Paint3D in $Paint3Dstuff) {
 Write-Host "Full install includes: Firefox, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys"
 $ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
 
-if ($ChocoChoice = "f")
+if ($ChocoChoice -is "f")
 {
     Write-Host "Installing Chocolatey"
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -333,7 +332,7 @@ if ($ChocoChoice = "f")
     choco install steam-client -y
 }
 
-elseif ($ChocoChoice = "m")
+elseif ($ChocoChoice -is "m")
 {
   Write-Host "Installing Chocolatey"
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -347,7 +346,7 @@ elseif ($ChocoChoice = "m")
 
 }
 
-elseif ($ChocoChoice = "s")
+elseif ($ChocoChoice -is "s")
 {
   Write-Host "Skipped Chocolatey package installs"
 }
