@@ -295,7 +295,7 @@ foreach ($Paint3D in $Paint3Dstuff) {
 Write-Host "Full install includes: Firefox, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys"
 $ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
 
-if ($ChocoChoice -is "f")
+if ($ChocoChoice -eq "f")
 {
     Write-Host "Installing Chocolatey"
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
