@@ -73,7 +73,6 @@ choco install $List_of_packages
 - Automate symlinking and run script files with a bootstrapping tool like [Dotbot](https://github.com/anishathalye/dotbot).
 - Revisit the list in [`.zshrc`](.zshrc) to customize the shell.
 - Make a checklist of steps to decommission your computer before wiping your hard drive.
-- Create a [bootable USB installer for macOS](https://support.apple.com/en-us/HT201372).
 - Finish Windows 10 Debloat script
 - Finish chocolatey package list installer script
 
