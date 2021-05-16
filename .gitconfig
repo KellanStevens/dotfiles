@@ -5,6 +5,5 @@
 	defaultBranch = "Kellan's-Scripts"
 [core]
 	editor = nano
-# After installing the 'code' command in PATH
 [core]
 	editor = code --wait
