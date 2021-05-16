@@ -44,6 +44,19 @@ brew bundle --file ~/.kellans_scripts/Brewfile
 cd ~/.kellans_scripts && brew bundle
 ```
 
+## Steps to bootstrap a new Windows 10 install
+
+1. Install Chocolatey.
+
+````pwsh
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+````
+
+2. Run Debloat script.
+````pwsh
+iex ((New-Object System.Net.WebClient).DownloadString('LINK TO SCRIPT'))
+````
+
 
 ## TODO List
 
@@ -53,4 +66,7 @@ cd ~/.kellans_scripts && brew bundle
 - Revisit the list in [`.zshrc`](.zshrc) to customize the shell.
 - Make a checklist of steps to decommission your computer before wiping your hard drive.
 - Create a [bootable USB installer for macOS](https://support.apple.com/en-us/HT201372).
+- Finish Windows 10 Debloat script
+- Finish chocolatey package list installer script
+
 
