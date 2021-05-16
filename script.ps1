@@ -299,10 +299,6 @@ $ChocoChoice = Read-Host -Prompt "Minimal install? (Firefox and VS-Code)[m], Ful
 
 if ($ChocoChoice = "f")
 {
-    Write-Host "Installing Chocolatey"
-	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-	choco install chocolatey-core.extension -y
-
     Write-Host "Installing Firefox"
     choco install firefox -y
 
