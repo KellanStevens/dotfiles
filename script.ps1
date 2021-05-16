@@ -295,6 +295,8 @@ foreach ($Paint3D in $Paint3Dstuff) {
 }
 }
 
+
+Write-Host "Full install includes: Firefox, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys"
 $ChocoChoice = Read-Host -Prompt "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
 
 if ($ChocoChoice = "f")
@@ -316,7 +318,6 @@ if ($ChocoChoice = "f")
 
     Write-Host "Installing Microsoft PowerToys"
     choco install powertoys -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
 
     Write-Host "Installing Telegram"
     choco install telegram -y
@@ -331,7 +332,7 @@ if ($ChocoChoice = "f")
     choco install steam-client -y
 }
 
-if ($ChocoChoice = "m")
+elseif ($ChocoChoice = "m")
 {
 
   Write-Host "Installing Firefox"
@@ -341,7 +342,8 @@ if ($ChocoChoice = "m")
   choco install vscode -y
 
 }
-if ($ChocoChoice = "s")
+
+elseif ($ChocoChoice = "s")
 {
   Write-Host "Skipped Chocolatey package installs"
 }
