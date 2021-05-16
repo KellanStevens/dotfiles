@@ -2,7 +2,7 @@ Write-Host "Installing Chocolatey"
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco install chocolatey-core.extension -y
 
-$DebloatChoice = Read-Host -Prompt "Do you want to Debloat Windows? Yes[y]/No[n]" # Asks user if they want to debloat windows or not
+$DebloatChoice = Read-Host "Do you want to Debloat Windows? Yes[y]/No[n]" # Asks user if they want to debloat windows or not
 
 if (($DebloatChoice = "y") -Or ($DebloatChoice = "Y"))
 {
@@ -297,7 +297,7 @@ foreach ($Paint3D in $Paint3Dstuff) {
 
 
 Write-Host "Full install includes: Firefox, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys"
-$ChocoChoice = Read-Host -Prompt "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
+$ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
 
 if ($ChocoChoice = "f")
 {
