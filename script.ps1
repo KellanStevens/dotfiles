@@ -1,6 +1,6 @@
 $DebloatChoice = Read-Host "Do you want to Debloat Windows? Yes[y]/No[n]" # Asks user if they want to debloat windows or not
 
-if ($DebloatChoice -is "y" -or $DebloatChoice -is "Y")
+if ($DebloatChoice -eq "y" -or $DebloatChoice -eq "Y")
 {
 
 Write-Host "Creating Restore Point incase something bad happens" 
@@ -332,7 +332,7 @@ if ($ChocoChoice -eq "f")
     choco install steam-client -y
 }
 
-elseif ($ChocoChoice -is "m")
+elseif ($ChocoChoice -eq "m")
 {
   Write-Host "Installing Chocolatey"
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -346,7 +346,7 @@ elseif ($ChocoChoice -is "m")
 
 }
 
-elseif ($ChocoChoice -is "s")
+elseif ($ChocoChoice -eq "s")
 {
   Write-Host "Skipped Chocolatey package installs"
 }
