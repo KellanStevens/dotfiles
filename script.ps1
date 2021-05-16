@@ -320,6 +320,8 @@ Write-Host "Enabling Dark Mode"
 Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
 Write-Host "Enabled Dark Mode"
     
+Start-Sleep -s 15
+
 }
 
 $OneDrive = Read-Host "Do you want to remove OneDrive? Yes[y]"
@@ -416,8 +418,6 @@ elseif ($ChocoChoice -eq "s")
 {
   Write-Host "Skipped Chocolatey package installs"
 }
-
-$wshell.Popup("Script is complete",0,"Thanks for using this script :)",0x0)
 
 # This script is a fork of ChrisTitus' debloat script
 # Adapted to how I'd like the script to run including chocolatey packages to stream like the bootstraping of a windows 10 install 
