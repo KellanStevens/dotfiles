@@ -57,6 +57,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 iex ((New-Object System.Net.WebClient).DownloadString('LINK TO SCRIPT'))
 ````
 
+3. Soon to be a chocolatey package dump list
+````pwsh
+choco install $List_of_packages
+````
+
 
 ## TODO List
 
