@@ -3,3 +3,8 @@
 	email = 45543616+Kellan2002@users.noreply.github.com
 [init]
 	defaultBranch = "Kellan's-Scripts"
+[core]
+	editor = nano
+# After installing the 'code' command in PATH
+[core]
+	editor = code --wait

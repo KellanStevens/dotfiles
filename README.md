@@ -12,10 +12,10 @@ xcode-select --install
 
 ```zsh
 # Use SSH (if set up)...
-git clone git@github.com:Kellan2002/Kellan-repo.git ~/.dotfiles
+git clone git@github.com:Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 
 # ...or use HTTPS and switch remotes later.
-git clone https://github.com/Kellan2002/Kellan-repo.git ~/.dotfiles
+git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 ```
 
 
@@ -25,10 +25,9 @@ git clone https://github.com/Kellan2002/Kellan-repo.git ~/.dotfiles
 # There are better and less manual ways to do this;
 # investigate install scripts and bootstrapping tools.
 
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.kellans_scripts/.zshrc ~/.zshrc
+ln -s ~/.kellans_scripts/.gitconfig ~/.gitconfig
 ```
-
 
 4. Install Homebrew, followed by the software listed in the Brewfile.
 
@@ -39,10 +38,10 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Then pass in the Brewfile location...
-brew bundle --file ~/.dotfiles/Brewfile
+brew bundle --file ~/.kellans_scripts/Brewfile
 
 # ...or move to the directory first.
-cd ~/.dotfiles && brew bundle
+cd ~/.kellans_scripts && brew bundle
 ```
 
 
