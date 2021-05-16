@@ -4,7 +4,7 @@ choco install chocolatey-core.extension -y
 
 $DebloatChoice = Read-Host "Do you want to Debloat Windows? Yes[y]/No[n]" # Asks user if they want to debloat windows or not
 
-if (($DebloatChoice = "y") -Or ($DebloatChoice = "Y"))
+if ($DebloatChoice -eq "y" -or $DebloatChoice -eq "Y")
 {
 
 Write-Host "Creating Restore Point incase something bad happens" 
