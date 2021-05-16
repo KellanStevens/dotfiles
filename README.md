@@ -54,7 +54,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 2. Run Debloat script.
 ````pwsh
-iex ((New-Object System.Net.WebClient).DownloadString('LINK TO SCRIPT'))
+iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Js8JO'))
 ````
 
 3. Soon to be a chocolatey package dump list
