@@ -388,7 +388,7 @@ if ($ChocoChoice -eq "f")
 
     Write-Host "Installing Microsoft PowerToys"
     choco install powertoys -y
-    Write-Host "PowerToys Installed"
+    Write-Host "PowerToys Installed "
 
     Write-Host "Installing Slack"
     choco install slack -y
