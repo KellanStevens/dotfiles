@@ -478,11 +478,11 @@ if ($WSL -eq "y" -or $WSL -eq "Y")
 }
 }
 
-
+# I would like to make this choco install packages 
 
 
 
 
 
 # This script is a fork of ChrisTitus' debloat script
-# Adapted to how I'd like the script to run including chocolatey packages to stream like the bootstraping of a windows 10 install 
+# Adapted to how I'd like the script to run including chocolatey packages to stream line the bootstraping of a windows 10 install 
