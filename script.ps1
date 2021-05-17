@@ -275,7 +275,7 @@ foreach ($Association in $Associations)
 
 #Removes Paint3D stuff from context menu
 $Paint3Dstuff = @(
-    "HKCR:\SystemFileAssociations\.3mf\Shell\3D Edit"
+"HKCR:\SystemFileAssociations\.3mf\Shell\3D Edit"
 "HKCR:\SystemFileAssociations\.bmp\Shell\3D Edit"
 "HKCR:\SystemFileAssociations\.fbx\Shell\3D Edit"
 "HKCR:\SystemFileAssociations\.gif\Shell\3D Edit"
@@ -357,7 +357,7 @@ if ($OneDrive -eq "y" -or $OneDrive -eq "Y")
 }
 
 
-Write-Host "Full install includes: Firefox, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys"
+Write-Host "Full install includes: Firefox, Git, Filezilla, iTunes, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys, Java SE Runtime 8.0"
 $ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
 
 if ($ChocoChoice -eq "f")
@@ -368,36 +368,67 @@ if ($ChocoChoice -eq "f")
 
     Write-Host "Installing Firefox"
     choco install firefox -y
+    Write-Host "FireFox installed"
 
     Write-Host "Installing VLC Media Player"
     choco install vlc -y
+    Write-Host "VLC Media Player installed"
 
     Write-Host "Installing 7-Zip Compression Tool"
     choco install 7zip -y
+    Write-Host "7-Zip Installed"
 
     Write-Host "Installing Visual Studio Code"
     choco install vscode -y
+    Write-Host "Visual Studio Code Installed"
 
     Write-Host "Installing New Windows Terminal"
     choco install microsoft-windows-terminal -y
+    Write-Host "Windows terminal"
 
     Write-Host "Installing Microsoft PowerToys"
     choco install powertoys -y
+    Write-Host "PowerToys Installed"
 
     Write-Host "Installing Telegram"
     choco install telegram -y
+    Write-Host "Telegram Installed"
+
+    Write-Host "Installing Whatsapp"
+    choco install whatsapp -y
+    Write-Host "Whatsapp Installed"
 
     Write-Host "Installing Discord"
     choco install discord -y
+    Write-Host "Discord Installed"
 
     Write-Host "Installing minecraft-launcher"
     choco install minecraft-launcher -y
+    Write-Host "Minecraft-Launcher Installed"
 
     Write-Host "Installing Steam"
     choco install steam-client -y
+    Write-Host "Steam-Client Installed"
 
     Write-Host "Installing Epic Games Launcher"
     choco install epicgameslauncher -y
+    Write-Host "EpicGames Store Installed"
+
+    Write-Host "Installing Java SE Runtime (8)"
+    choco install jre8 -y
+    Write-Host "Installed Java8 Runtime"
+
+    Write-Host "Installing Git"
+    choco install git -y
+    Write-Host "Installed Git"
+
+    Write-Host "Installing FileZilla"
+    choco install filezilla -y
+    Write-Host "Installed FileZilla"
+    
+    Write-Host "Installing iTunes"
+    choco install itunes -y
+    Write-Host "Installed iTunes"
 }
 
 elseif ($ChocoChoice -eq "m")
@@ -418,6 +449,32 @@ elseif ($ChocoChoice -eq "s")
 {
   Write-Host "Skipped Chocolatey package installs"
 }
+
+$WSL = Read-Host "Would you like to install/enable Windows Subsystem for Linux, this may require a restart. Yes[y]"
+
+if ($WSL -eq "y" -or $WSL -eq "Y")
+{
+  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+  $WSL2 = Read-Host "Would you like to install WSL2, this enables Virtual Machine Platform, your machine will require virtualisation capabalities"
+
+  if ($WSL2 -eq "y" -or $WSL2 -eq "Y")
+{
+  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+  $WSLDefault = Read-Host "Would you like WSL2 to be set as the default version?"
+
+  if ($WSLDefault -eq "y" -or $WSLDefault -eq "Y"){
+wsl --set-default-version 2
+  }
+}
+}
+
+
+
+
+
+
 
 # This script is a fork of ChrisTitus' debloat script
 # Adapted to how I'd like the script to run including chocolatey packages to stream like the bootstraping of a windows 10 install 

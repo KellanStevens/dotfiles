@@ -23,7 +23,7 @@ git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 
 ```zsh
 # There are better and less manual ways to do this;
-# investigate install scripts and bootstrapping tools.
+# investigating install scripts and bootstrapping tools.
 
 ln -s ~/.kellans_scripts/.zshrc ~/.zshrc
 ln -s ~/.kellans_scripts/.gitconfig ~/.gitconfig
