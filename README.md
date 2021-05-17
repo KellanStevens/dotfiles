@@ -95,8 +95,6 @@ choco install $List_of_packages
 - Finish chocolatey package list installer script
 - Allow users to choose exactly what applications they want to install with chocolatey
 
-
-
 [contributors-shield]: https://img.shields.io/github/contributors/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
 [contributors-url]: https://github.com/Kellan2002/Kellans-Scripts/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
@@ -106,6 +104,6 @@ choco install $List_of_packages
 [issues-shield]: https://img.shields.io/github/issues/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
 [issues-url]: https://github.com/Kellan2002/Kellans-Scripts/issues
 [license-shield]: https://img.shields.io/github/license/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
-[license-url]: https://github.com/Kellan2002/Kellans-Scripts/blob/master/LICENSE.txt
-[twitter-shield]: https://img.shields.io/twitter/url?label=Twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fstevenskellan
-[twitter-url]: https://twitter.com/stevenskellan
+[license-url]: https://github.com/Kellan2002/Kellans-Scripts/blob/master/LICENSE
+[twitter-shield]: https://img.shields.io/twitter/follow/stevenskellan?style=for-the-badge
+[twitter-url]: https://twitter.com/stevenskellan/follow
