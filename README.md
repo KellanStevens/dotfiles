@@ -10,7 +10,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][twitter-shield]][twitter-url]
 
 
@@ -103,7 +102,5 @@ choco install $List_of_packages
 [stars-url]: https://github.com/Kellan2002/Kellans-Scripts/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
 [issues-url]: https://github.com/Kellan2002/Kellans-Scripts/issues
-[license-shield]: https://img.shields.io/github/license/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
-[license-url]: https://github.com/Kellan2002/Kellans-Scripts/blob/master/LICENSE
 [twitter-shield]: https://img.shields.io/twitter/follow/stevenskellan?style=for-the-badge
 [twitter-url]: https://twitter.com/stevenskellan/follow
