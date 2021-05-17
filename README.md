@@ -37,7 +37,7 @@ git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 
 
 3. Create symlinks in the Home directory to the real files in the repo.
-> *To Display Hidden Files in Finder: Command + Shift + .*
+> *To Display Hidden Files in Finder: Command ⌘ + Shift ⇧ + .*
 
 ```zsh
 # There are better and less manual ways to do this;
