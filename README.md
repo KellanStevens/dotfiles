@@ -75,5 +75,6 @@ choco install $List_of_packages
 - Make a checklist of steps to decommission your computer before wiping your hard drive.
 - Finish Windows 10 Debloat script
 - Finish chocolatey package list installer script
+- Allow users to choose exactly what applications they want to install with chocolatey
 
 
