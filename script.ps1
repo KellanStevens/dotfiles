@@ -357,7 +357,7 @@ if ($OneDrive -eq "y" -or $OneDrive -eq "Y")
 }
 
 
-Write-Host "Full install includes: Firefox, Git, Filezilla, iTunes, VLC Media Player, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys, Java SE Runtime 8.0"
+Write-Host "Full install includes: Firefox, Git, Filezilla, iTunes, Slack, VLC Media Player, Spotify, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys, Java SE Runtime 8.0"
 $ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
 
 if ($ChocoChoice -eq "f")
@@ -390,6 +390,10 @@ if ($ChocoChoice -eq "f")
     choco install powertoys -y
     Write-Host "PowerToys Installed"
 
+    Write-Host "Installing Slack"
+    choco install slack -y
+    Write-Host "Slack Installed"
+
     Write-Host "Installing Telegram"
     choco install telegram -y
     Write-Host "Telegram Installed"
@@ -397,6 +401,10 @@ if ($ChocoChoice -eq "f")
     Write-Host "Installing Whatsapp"
     choco install whatsapp -y
     Write-Host "Whatsapp Installed"
+
+    Write-Host "Installing Spotify"
+    choco install spotify -y
+    Write-Host "Installed Spotify"
 
     Write-Host "Installing Discord"
     choco install discord -y
@@ -465,7 +473,7 @@ if ($WSL -eq "y" -or $WSL -eq "Y")
   $WSLDefault = Read-Host "Would you like WSL2 to be set as the default version?"
 
   if ($WSLDefault -eq "y" -or $WSLDefault -eq "Y"){
-    wsl --set-default-version 2
+  wsl --set-default-version 2
   }
 }
 }
