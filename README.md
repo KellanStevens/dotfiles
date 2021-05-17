@@ -1,3 +1,20 @@
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Twitter][Twitter-Shield]][https://twitter.com/stevenskellan]
+
+
+
 # Kellan's-Scripts
 ## Steps to bootstrap a new Mac
 
@@ -20,6 +37,7 @@ git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 
 
 3. Create symlinks in the Home directory to the real files in the repo.
+> *To Display Hidden Files in Finder: Command + Shift + .*
 
 ```zsh
 # There are better and less manual ways to do this;
@@ -64,7 +82,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Js8JO'))
 ````pwsh
 choco install $List_of_packages
 ````
-
 
 ## TODO List
 
