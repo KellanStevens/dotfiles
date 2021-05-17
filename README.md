@@ -103,4 +103,4 @@ choco install $List_of_packages
 [issues-shield]: https://img.shields.io/github/issues/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
 [issues-url]: https://github.com/Kellan2002/Kellans-Scripts/issues
 [twitter-shield]: https://img.shields.io/twitter/follow/stevenskellan?style=for-the-badge
-[twitter-url]: https://twitter.com/stevenskellan/follow
+[twitter-url]: https://twitter.com/stevenskellan/
