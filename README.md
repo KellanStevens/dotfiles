@@ -46,7 +46,7 @@ cd ~/.kellans_scripts && brew bundle
 
 ## Steps to bootstrap a new Windows 10 install
 
-> *Make sure you are open PowerShell with Administrator*
+> *Make sure you open PowerShell with Administrator*
 
 
 1. Install Chocolatey.
