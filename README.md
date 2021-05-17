@@ -12,8 +12,26 @@
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][twitter-shield]][twitter-url]
 
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/Kellan2002/Kellans-Scripts">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
+  <h3 align="center">Kellan's Scripts</h3>
 
+  <p align="center">
+    This repo includes scripts to bootstrap Windows 10, MacOS and soon Linux
+    <br />
+    <br />
+    ·
+    <a href="https://github.com/Kellan2002/Kellans-Scripts/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Kellan2002/Kellans-Scripts/issues">Request Feature</a>
+    .
+  </p>
+</p>
 
 # Kellan's-Scripts
 ## Steps to bootstrap a new Mac
