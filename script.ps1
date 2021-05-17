@@ -465,7 +465,7 @@ if ($WSL -eq "y" -or $WSL -eq "Y")
   $WSLDefault = Read-Host "Would you like WSL2 to be set as the default version?"
 
   if ($WSLDefault -eq "y" -or $WSLDefault -eq "Y"){
-wsl --set-default-version 2
+    wsl --set-default-version 2
   }
 }
 }
