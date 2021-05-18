@@ -314,12 +314,7 @@ Write-Host "Disabling Cortana..."
         New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Force | Out-Null
     }
     Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Name "AllowCortana" -Type DWord -Value 0
-    Write-Host "Disabled Cortana"
-
-Write-Host "Enabling Dark Mode"
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
-Write-Host "Enabled Dark Mode"
-    
+    Write-Host "Disabled Cortana"    
 Start-Sleep -s 15
 
 }
@@ -356,6 +351,33 @@ if ($OneDrive -eq "y" -or $OneDrive -eq "Y")
   Write-Host "Disabled OneDrive"
 }
 
+$windowssearch = Read-Host "Would you like to remove Windows Search? Yes[y]/No[n]"
+
+if ($windowssearch -eq "y" -or $windowssearch -eq "Y")
+{
+  Write-Host "Disabling Bing Search in Start Menu..."
+  Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "BingSearchEnabled" -Type DWord -Value 0
+  Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "CortanaConsent" -Type DWord -Value 0
+  If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search")) {
+      New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Force | Out-Null
+  }
+  Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Name "DisableWebSearch" -Type DWord -Value 1
+  Write-Host "Stopping and disabling Windows Search indexing service..."
+  Stop-Service "WSearch" -WarningAction SilentlyContinue
+  Set-Service "WSearch" -StartupType Disabled
+  Write-Host "Hiding Taskbar Search icon / box..."
+  Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
+  Write-Host "Search tweaks completed"
+}
+
+$darkmode = Read-Host "Do you want to enable dark mode? Yes[y]/No[n]"
+
+if ($darkmode -eq "y" -or $darkmode -eq "Y")
+{
+  Write-Host "Enabling Dark Mode"
+  Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
+  Write-Host "Enabled Dark Mode"
+}
 
 Write-Host "Full install includes: Firefox, Git, Filezilla, iTunes, Slack, VLC Media Player, Spotify, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys, Java SE Runtime 8.0"
 $ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], install PowerToys only [p] or skip chocolatey packages [s]"
