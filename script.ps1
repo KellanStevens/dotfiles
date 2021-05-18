@@ -23,6 +23,7 @@ Disable-ScheduledTask -TaskName "Microsoft\Windows\Autochk\Proxy" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" | Out-Null
+
 Write-Host "Disabling Application suggestions..."
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "ContentDeliveryAllowed" -Type DWord -Value 0
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "OemPreInstalledAppsEnabled" -Type DWord -Value 0
@@ -120,6 +121,7 @@ Do {
   Start-Sleep -Milliseconds 100
   $preferences = Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\TaskManager" -Name "Preferences" -ErrorAction SilentlyContinue
 } Until ($preferences)
+
 Stop-Process $taskmgr
 $preferences.Preferences[28] = 0
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\TaskManager" -Name "Preferences" -Type Binary -Value $preferences.Preferences
@@ -163,7 +165,6 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control" -Name "SvcHostSplitThresholdInKB" -Type DWord -Value 4194304
 
 $Bloatware = @(
-
     #Unnecessary Windows 10 AppX Apps
     "Microsoft.3DBuilder"
     "Microsoft.AppConnector"
@@ -272,7 +273,6 @@ foreach ($Association in $Associations)
         Set-ItemProperty $Class -Name NoStaticDefaultVerb -Value "" 
         } 
         
-
 #Removes Paint3D stuff from context menu
 $Paint3Dstuff = @(
 "HKCR:\SystemFileAssociations\.3mf\Shell\3D Edit"
@@ -349,6 +349,18 @@ if ($OneDrive -eq "y" -or $OneDrive -eq "Y")
   Remove-Item -Path "HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Recurse -ErrorAction SilentlyContinue
   Remove-Item -Path "HKCR:\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Recurse -ErrorAction SilentlyContinue
   Write-Host "Disabled OneDrive"
+}
+
+$backgroundapps = Read-Host "Do you want to disable background apps Yes[y]/No[n]"
+
+if ($backgroundapps -eq "y" -or $backgroundapps -eq "Y")
+{
+  Write-Host "Disabling Background application access..."
+  Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
+      Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
+      Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
+  }
+  Write-Host "Disabled Background application access"
 }
 
 $windowssearch = Read-Host "Would you like to remove Windows Search? Yes[y]/No[n]"
