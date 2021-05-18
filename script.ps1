@@ -358,7 +358,7 @@ if ($OneDrive -eq "y" -or $OneDrive -eq "Y")
 
 
 Write-Host "Full install includes: Firefox, Git, Filezilla, iTunes, Slack, VLC Media Player, Spotify, 7-Zip, Visual Studio Code, Microsoft PowerToys, Telegram, Whatsapp web, Discord, Minecraft-Launcher, Steam, Epic Games Launcher and PowerToys, Java SE Runtime 8.0"
-$ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], skip chocolatey packages [s]"
+$ChocoChoice = Read-Host "Minimal install? (Firefox and VS-Code)[m], Full install [f], install PowerToys only [p] or skip chocolatey packages [s]"
 
 if ($ChocoChoice -eq "f")
 {
@@ -450,7 +450,17 @@ elseif ($ChocoChoice -eq "m")
 
   Write-Host "Installing Visual Studio Code"
   choco install vscode -y
+}
 
+elseif ($ChocoChoice -eq "p" -or $ChocoChoice -eq "P")
+{
+  Write-Host "Installing Chocolatey"
+  Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  choco install chocolatey-core.extension -y
+
+  Write-Host "Installing Microsoft PowerToys"
+  choco install powertoys -y
+  Write-Host "PowerToys Installed"
 }
 
 elseif ($ChocoChoice -eq "s")

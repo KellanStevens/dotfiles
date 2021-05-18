@@ -26,8 +26,6 @@ while true; do  # only breaks out of while loop once user chooses y/Y or n/N
     esac
 done
 
-
-
 while true; do
   echo
   read -n1 -p "Would you like to use this repo's zsh config? Yes[y]/No[n] " zshrc_config
@@ -36,7 +34,6 @@ while true; do
     y|Y)
       flag=true;
       break;;
-
     n|N)
       flag=false;
       break;;
@@ -45,3 +42,5 @@ done
 
 echo
 echo $flag
+
+if $flag 
