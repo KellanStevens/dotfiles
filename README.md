@@ -16,7 +16,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Kellan2002/Kellans-Scripts">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Kellan's Scripts</h3>
@@ -33,7 +33,46 @@
   </p>
 </p>
 
-# Kellan's-Scripts
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+My main OS of use is MacOS. Windows 10 and Linux are my secondary, and I end up reinstalling these operating systems often.
+
+This process is similar to [`Bootstrapping`](https://www.techopedia.com/definition/3328/bootstrap), but in a way more basic sense. 
+
+I decided to create multiple scripts to automate this process for all the OS platforms I use (MacOS, Linux(Debian), and of course Windows 10)
+### Built With
+
+* [Bash]()
+* [Powershell]()
+
 ## Steps to bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
@@ -41,8 +80,6 @@
 ```zsh
 xcode-select --install
 ```
-
-
 2. Clone repo into new hidden directory.
 
 ```zsh
@@ -52,7 +89,6 @@ git clone git@github.com:Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 # ...or use HTTPS and switch remotes later.
 git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 ```
-
 
 3. Create symlinks in the Home directory to the real files in the repo.
 > *To Display Hidden Files in Finder: Command ⌘ + Shift ⇧ + .*
@@ -84,22 +120,11 @@ cd ~/.kellans_scripts && brew bundle
 
 > *Make sure you open PowerShell with Administrator*
 
-
-1. Install Chocolatey.
-
-````pwsh
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-````
-
-2. Run Debloat script.
+### Run script.
 ````pwsh
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Js8JO'))
 ````
 
-3. Soon to be a chocolatey package dump list
-````pwsh
-choco install $List_of_packages
-````
 
 ## TODO List
 
