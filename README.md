@@ -43,7 +43,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
+    <!-- <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -56,7 +56,7 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
+  </ol> -->
 </details>
 
 
