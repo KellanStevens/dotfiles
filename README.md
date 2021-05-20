@@ -43,20 +43,21 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <!-- <li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#steps-to-bootstrap-a-new-mac">MacOS</a></li>
+        <li><a href="#steps-to-bootstrap-a-new-windows-10-install">Windows</a></li>
+        <li><a href="#steps-to-bootstrap-a-new-debian-install">Linux</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <!-- <li><a href="#usage">Usage</a></li> -->
+    <li><a href="#contrubuting">Contrubuting</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol> -->
+    <li><a href="#license">License</a></li>
+    <li><a href="#todo-list">TODO-List</a></li>
+    <!-- <li><a href="#acknowledgements">Acknowledgements</a></li> -->
+  </ol>
 </details>
 
 
@@ -74,7 +75,7 @@ I decided to create multiple scripts to automate this process for all the OS pla
 * [Powershell]()
 
 ## Steps to bootstrap a new Mac
-
+*I am still busy working on a single script for MacOS*
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
 ```zsh
@@ -125,7 +126,24 @@ cd ~/.kellans_scripts && brew bundle
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Js8JO'))
 ````
 
+## Contributing
 
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Contact
+
+*You can DM me on twitter*
+
+Kellan - [@stevenskellan](https://twitter.com/stevenskellan)
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
 ## TODO List
 
 - Learn how to use [`defaults`](https://macos-defaults.com/#%F0%9F%99%8B-what-s-a-defaults-command) to record and restore System Preferences and other macOS configurations.
