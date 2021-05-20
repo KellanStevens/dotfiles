@@ -52,7 +52,7 @@
       </ul>
     </li>
     <!-- <li><a href="#usage">Usage</a></li> -->
-    <li><a href="#contrubuting">Contrubuting</a></li>
+    <li><a href="#Contributing">Contrubuting</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#todo-list">TODO-List</a></li>
@@ -63,18 +63,18 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 My main OS of use is MacOS. Windows 10 and Linux are my secondary, and I end up reinstalling these operating systems often.
 
 This process is similar to [`Bootstrapping`](https://www.techopedia.com/definition/3328/bootstrap), but in a way more basic sense. 
 
 I decided to create multiple scripts to automate this process for all the OS platforms I use (MacOS, Linux(Debian), and of course Windows 10)
-### Built With
+# Built With
 
 * [Bash]()
 * [Powershell]()
 
-## Steps to bootstrap a new Mac
+# Steps to bootstrap a new Mac
 *I am still busy working on a single script for MacOS*
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
@@ -117,7 +117,7 @@ brew bundle --file ~/.kellans_scripts/Brewfile
 cd ~/.kellans_scripts && brew bundle
 ```
 
-## Steps to bootstrap a new Windows 10 install
+# Steps to bootstrap a new Windows 10 install
 
 > *Make sure you open PowerShell with Administrator*
 
@@ -126,7 +126,7 @@ cd ~/.kellans_scripts && brew bundle
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Js8JO'))
 ````
 
-## Contributing
+# Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -136,15 +136,15 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Contact
+# Contact
 
 *You can DM me on twitter*
 
 Kellan - [@stevenskellan](https://twitter.com/stevenskellan)
 
-## License
+# License
 Distributed under the MIT License. See `LICENSE` for more information.
-## TODO List
+# TODO List
 
 - Learn how to use [`defaults`](https://macos-defaults.com/#%F0%9F%99%8B-what-s-a-defaults-command) to record and restore System Preferences and other macOS configurations.
 - Organize these growing steps into multiple script files.
