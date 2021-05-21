@@ -502,12 +502,20 @@ elseif ($ChocoChoice -eq "s")
   Write-Host "Skipped Chocolatey package installs"
 }
 
-$WSL = Read-Host "Would you like to install/enable Windows Subsystem for Linux, this may require a restart. Yes[y]"
+$WSL = Read-Host "Would you like to install/enable Windows Subsystem for Linux, this may require a restart. Yes[y]/No[n]"
 
 if ($WSL -eq "y" -or $WSL -eq "Y")
 {
   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
+  $Ubuntu = Read-Host "Would you like to installUbuntu 20.04 LTS for WSL Yes[y]/No[n]"
+
+  if ($Ubuntu -eq "y" -or $Ubuntu -eq "Y")
+  {
+    Write-Host "Installing Ubuntu 20.04 LTS for WSL"
+    choco install wsl-ubuntu-2004 -y
+    Write-Host "Ubuntu 20.04 LTS Installed"
+  }
   $WSL2 = Read-Host "Would you like to install WSL2, this enables Virtual Machine Platform, your machine will require virtualisation capabalities"
 
   if ($WSL2 -eq "y" -or $WSL2 -eq "Y")
