@@ -53,7 +53,7 @@
       </ul>
     </li>
     <!-- <li><a href="#usage">Usage</a></li> -->
-    <li><a href="#Contributing">Contrubuting</a></li>
+    <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#todo-list">TODO-List</a></li>
@@ -84,7 +84,7 @@ xcode-select --install
 ```
 2. Clone repo into new hidden directory.
 
-```zsh
+```bash
 # Use SSH (if set up)...
 git clone git@github.com:Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 
@@ -132,9 +132,9 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Js8JO'))
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch  `git checkout -b feature/AmazingFeature`
+3. Commit your Changes  `git commit -m 'Add some AmazingFeature'`
+4. Push to the Branch  `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 
 <!-- CONTACT -->
@@ -155,8 +155,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Revisit the list in [`.zshrc`](.zshrc) to customize the shell.
 - Make a checklist of steps to decommission your computer before wiping your hard drive.
 - Finish Windows 10 Debloat [`script.ps1`](script.ps1)
-- Finish chocolatey package list installer script
+- Make chocolatey pacckage install code dynamic
 - Allow users to choose exactly what applications they want to install with chocolatey
+- ~~Finish chocolatey package list installer script~~
 
 [contributors-shield]: https://img.shields.io/github/contributors/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
 [contributors-url]: https://github.com/Kellan2002/Kellans-Scripts/graphs/contributors

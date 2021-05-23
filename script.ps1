@@ -356,7 +356,7 @@ $backgroundapps = Read-Host "Do you want to disable background apps Yes[y]/No[n]
 if ($backgroundapps -eq "y" -or $backgroundapps -eq "Y")
 {
   Write-Host "Disabling Background application access..."
-  Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
+  Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach-Object {
       Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
       Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
   }
@@ -530,7 +530,7 @@ if ($WSL -eq "y" -or $WSL -eq "Y")
 }
 }
 
-# I would like to make this choco install packages 
+# I would like to make this choco install packages more dynamic
 
 
 
