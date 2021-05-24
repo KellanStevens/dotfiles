@@ -1,4 +1,3 @@
-<!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
@@ -6,6 +5,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -75,7 +75,8 @@ I decided to create multiple scripts to automate this process for all the OS pla
 * [Powershell]()
 
 <!-- MACOS -->
-# Steps to bootstrap a new Mac
+# Getting Started
+## Steps to bootstrap a new Mac
 *I am still busy working on a single script for MacOS*
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
@@ -118,7 +119,7 @@ brew bundle --file ~/.kellans_scripts/Brewfile
 cd ~/.kellans_scripts && brew bundle
 ```
 <!-- WINDOWS 10 -->
-# Steps to bootstrap a new Windows 10 install
+## Steps to bootstrap a new Windows 10 install
 
 > *Make sure you open PowerShell with Administrator*
 
