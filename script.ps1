@@ -356,9 +356,11 @@ $backgroundapps = Read-Host "Do you want to disable background apps Yes[y]/No[n]
 if ($backgroundapps -eq "y" -or $backgroundapps -eq "Y")
 {
   Write-Host "Disabling Background application access..."
-  Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
-  Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
-  Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
+
+  Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach-Object {
+      Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
+      Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
+>>>>>>> 90f8039bbb1429f597641b057dd74b77b7107374
   }
   Write-Host "Disabled Background application access"
 }
@@ -505,12 +507,20 @@ elseif ($ChocoChoice -eq "s")
   Write-Host "Skipped Chocolatey package installs"
 }
 
-$WSL = Read-Host "Would you like to install/enable Windows Subsystem for Linux, this may require a restart. Yes[y]"
+$WSL = Read-Host "Would you like to install/enable Windows Subsystem for Linux, this may require a restart. Yes[y]/No[n]"
 
 if ($WSL -eq "y" -or $WSL -eq "Y")
 {
   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
+  $Ubuntu = Read-Host "Would you like to installUbuntu 20.04 LTS for WSL Yes[y]/No[n]"
+
+  if ($Ubuntu -eq "y" -or $Ubuntu -eq "Y")
+  {
+    Write-Host "Installing Ubuntu 20.04 LTS for WSL"
+    choco install wsl-ubuntu-2004 -y
+    Write-Host "Ubuntu 20.04 LTS Installed"
+  }
   $WSL2 = Read-Host "Would you like to install WSL2, this enables Virtual Machine Platform, your machine will require virtualisation capabalities"
 
   if ($WSL2 -eq "y" -or $WSL2 -eq "Y")
@@ -525,7 +535,7 @@ if ($WSL -eq "y" -or $WSL -eq "Y")
 }
 }
 
-# I would like to make this choco install packages 
+# I would like to make this choco install packages more dynamic
 
 
 
