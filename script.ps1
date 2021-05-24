@@ -360,7 +360,6 @@ if ($backgroundapps -eq "y" -or $backgroundapps -eq "Y")
   Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach-Object {
       Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
       Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
->>>>>>> 90f8039bbb1429f597641b057dd74b77b7107374
   }
   Write-Host "Disabled Background application access"
 }
