@@ -357,8 +357,8 @@ if ($backgroundapps -eq "y" -or $backgroundapps -eq "Y")
 {
   Write-Host "Disabling Background application access..."
   Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
-      Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
-      Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
+  Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
+  Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
   }
   Write-Host "Disabled Background application access"
 }
@@ -373,6 +373,9 @@ if ($windowssearch -eq "y" -or $windowssearch -eq "Y")
   If (!(Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search")) {
       New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Force | Out-Null
   }
+  Write-Host "Delete Windows Search"
+  Remove-Item C:\ProgramData\MicrosoftSyncFramework
+
   Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Name "DisableWebSearch" -Type DWord -Value 1
   Write-Host "Stopping and disabling Windows Search indexing service..."
   Stop-Service "WSearch" -WarningAction SilentlyContinue
