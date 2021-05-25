@@ -150,7 +150,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- TODO LIST -->
 # TODO List
 
-- Learn how to use [`defaults`](https://macos-defaults.com/#%F0%9F%99%8B-what-s-a-defaults-command) to record and restore System Preferences and other macOS configurations.
+- Learn how to use [`defaults`](https://macos-defaults.com/#%F0%9F%99%8B-what-s-a-defaults-command) to record and restore System Preferences and other macOS configurations, and this [`resource`](https://github.com/mathiasbynens/dotfiles/blob/main/.macos)
 - Organize these growing steps into multiple script files.
 - Automate symlinking and run script files with a bootstrapping tool like [Dotbot](https://github.com/anishathalye/dotbot).
 - Revisit the list in [`.zshrc`](.zshrc) to customize the shell.
