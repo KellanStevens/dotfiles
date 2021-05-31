@@ -16,21 +16,6 @@ printf "\rProgress : [${_fill// /#}${_empty// /-}] ${_progress}%%"
 
 }
 
-_command(){
-  case $i in
-  1) defaults write com.apple.dock "orientation" -string "left" && killall Dock;;
-  2) defaults write com.apple.dock "autohide" -bool "true" && killall Dock;;
-  3) defaults write com.apple.dock autohide-time-modifier -float 0.125 && killall Dock;;
-  4) defaults write com.apple.dock "show-recents" -bool "false" && killall Dock;;
-  5) defaults write com.apple.screencapture type JPG;;
-  6) defaults write com.apple.screencapture "disable-shadow" -bool "true" ;;
-  7) defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots" && killall SystemUIServer;;
-  8) defaults write com.apple.Finder "AppleShowAllFiles" -bool "true" && killall Finder;;
-  9) defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "true" && killall Music;;
-  esac
-}
-_command
-
 # Variables
 _start=1
 
@@ -78,55 +63,41 @@ while true; do
 done
 
 echo
-echo $flag
+echo 
 
-i=1
+if $flag -eq true; then
+echo -ne '##                        (5%)\r'
+defaults write com.apple.dock "orientation" -string "left" && killall Dock;
+sleep 0.1
+echo -ne '####                      (15%)\r'
+defaults write com.apple.dock "autohide" -bool "true" && killall Dock;
+sleep 0.1
+echo -ne '#######                   (33%)\r'
+defaults write com.apple.dock autohide-time-modifier -float 0.125 && killall Dock;
+sleep 0.9
+defaults write com.apple.dock "show-recents" -bool "false" && killall Dock;
+sleep 0.4
+echo -ne '############              (55%)\r'
+defaults write com.apple.screencapture type JPG;
+sleep 0.1
+echo -ne '##############            (66%)\r'
+defaults write com.apple.screencapture "disable-shadow" -bool "true" ;
+sleep 0.8
+echo -ne '################          (77%)\r'
+defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots" && killall SystemUIServer;
+sleep 0.5
+echo -ne '##################        (88%)\r'
+defaults write com.apple.Finder "AppleShowAllFiles" -bool "true" && killall Finder;
+sleep 0.1
+echo -ne '#####################     (95%)\r'
+defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "true" && killall Music;
+defaults write -g ApplePressAndHoldEnabled -bool false;
+defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock ;
+defaults write com.apple.dock autohide-delay -float 0; killall Dock;
+sleep 0.2
+echo -ne '######################### (100%)\r'
 
-for i in {1..9}; do
-  _command $i
-done
-
-# if $flag -eq true; then
-# # echo -ne '#####                     (33%)\r'
-# # sleep 1
-# # echo -ne '#############             (66%)\r'
-# # sleep 1
-# # echo -ne '#######################   (100%)\r'
-# # echo -ne '\n'
-  
-#   echo "Moving dock to left"
-#   defaults write com.apple.dock "orientation" -string "left" && killall Dock
-  
-#   echo "Enabling dock autohide"
-#   defaults write com.apple.dock "autohide" -bool "true" && killall Dock
-  
-#   echo "Increasing dock unhide animation"
-#   defaults write com.apple.dock autohide-time-modifier -float 0.125 && killall Dock
-  
-#   echo "Disabling recent apps in dock"
-#   defaults write com.apple.dock "show-recents" -bool "false" && killall Dock
-
-#   echo "Changing screenshot image type to JPG"
-#   defaults write com.apple.screencapture type JPG
-
-#   echo "Disabling screenshot shadow"
-#   defaults write com.apple.screencapture "disable-shadow" -bool "true"  
-
-#   echo "Setting screenshot location to /Documents/Screenshots"
-#   defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots" && killall SystemUIServer
-
-#   echo "Show hidden files enabled"
-#   defaults write com.apple.Finder "AppleShowAllFiles" -bool "true" && killall Finder
-
-#   echo "Show Music song notifications"
-#   defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "true" && killall Music
-#   for number in $(seq ${_start} ${_end})
-#     do
-#     sleep 0.01
-#     ProgressBar ${number} ${_end}
-#     done
-#     printf '\nFinished!\n'
-#     fi
-
-
-  
+sleep 0.1
+echo -ne '\n'
+echo 'Finished!'
+fi
