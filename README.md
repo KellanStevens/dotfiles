@@ -86,10 +86,6 @@ xcode-select --install
 2. Clone repo into new hidden directory.
 
 ```bash
-# Use SSH (if set up)...
-git clone git@github.com:Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
-
-# ...or use HTTPS and switch remotes later.
 git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 ```
 
@@ -97,9 +93,6 @@ git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
 > *To Display Hidden Files in Finder: Command ⌘ + Shift ⇧ + .*
 
 ```zsh
-# There are better and less manual ways to do this;
-# investigating install scripts and bootstrapping tools.
-
 ln -s ~/.kellans_scripts/.zshrc ~/.zshrc
 ln -s ~/.kellans_scripts/.gitconfig ~/.gitconfig
 ```
