@@ -151,6 +151,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Finish Windows 10 Debloat [`script.ps1`](script.ps1)
 - Make chocolatey pacckage install code dynamic
 - Allow users to choose exactly what applications they want to install with chocolatey
+- Add a GUI to all the scripts
 - ~~Finish chocolatey package list installer script~~
 
 [contributors-shield]: https://img.shields.io/github/contributors/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
