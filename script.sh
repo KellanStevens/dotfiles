@@ -100,6 +100,20 @@ echo
 
 while true; do
   echo
+  read -n1 -p "Would you like to setup fish as your default shell? Yes[y]/No[n]" fish_set
+
+  case $fish_set in 
+    y|Y)
+      echo "Setting FISH as default shell"
+      chsh -s /usr/local/bin/fish
+      echo function fish_greeting\n\tneofetch\nend >> ~/.config/fish/config.fish
+    n|N)
+      break;;
+    esac
+done
+
+while true; do
+  echo
   read -n1 -p "Would you like to change prefrences? Yes[y]/No[n] " pref_ans
 
   case $pref_ans in
