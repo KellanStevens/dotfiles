@@ -73,7 +73,6 @@ if $brew_check -eq false; then
   while true; do
   echo
   read -n1 -p "Would you like to install homebrew? Yes[y]/No[n]" brew_install
-  #read -n1 -p "Would you like to install Homebrew packages? Yes[y]/No[n] " brew_file
 
   case $brew_install in
     y|Y)
@@ -104,9 +103,11 @@ while true; do
 
   case $fish_set in 
     y|Y)
-      echo "Setting FISH as default shell"
-      chsh -s /usr/local/bin/fish
-      echo function fish_greeting\n\tneofetch\nend >> ~/.config/fish/config.fish
+      echo "Setting FISH as default shell" ;
+      chsh -s /usr/local/bin/fish ;
+      echo function fish_greeting\n\tneofetch\nend >> ~/.config/fish/config.fish ;
+      curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish ;
+      omf install robbyrussell
     n|N)
       break;;
     esac
