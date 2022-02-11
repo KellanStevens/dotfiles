@@ -16,7 +16,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Kellan2002/Kellans-Scripts">
+  <a href="https://github.com/KellanStevens/Kellans-Scripts">
     <img src="Images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -27,9 +27,9 @@
     <br />
     <br />
     ·
-    <a href="https://github.com/Kellan2002/Kellans-Scripts/issues">Report Bug</a>
+    <a href="https://github.com/KellanStevens/Kellans-Scripts/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Kellan2002/Kellans-Scripts/issues">Request Feature</a>
+    <a href="https://github.com/KellanStevens/Kellans-Scripts/issues">Request Feature</a>
     .
   </p>
 </p>
@@ -86,7 +86,7 @@ xcode-select --install
 2. Clone repo into new hidden directory.
 
 ```bash
-git clone https://github.com/Kellan2002/Kellans-Scripts.git ~/.kellans_scripts
+git clone https://github.com/KellanStevens/Kellans-Scripts.git ~/.kellans_scripts
 ```
 
 3. Create symlinks in the Home directory to the real files in the repo.
@@ -154,15 +154,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Add a GUI to all the scripts
 - ~~Finish chocolatey package list installer script~~
 
-[contributors-shield]: https://img.shields.io/github/contributors/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kellan2002/Kellans-Scripts/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
-[forks-url]: https://github.com/Kellan2002/Kellans-Scripts/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
-[stars-url]: https://github.com/Kellan2002/Kellans-Scripts/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Kellan2002/Kellans-Scripts.svg?style=for-the-badge
-[issues-url]: https://github.com/Kellan2002/Kellans-Scripts/issues
+[contributors-shield]: https://img.shields.io/github/contributors/KellanStevens/Kellans-Scripts.svg?style=for-the-badge
+[contributors-url]: https://github.com/KellanStevens/Kellans-Scripts/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/KellanStevens/Kellans-Scripts.svg?style=for-the-badge
+[forks-url]: https://github.com/KellanStevens/Kellans-Scripts/network/members
+[stars-shield]: https://img.shields.io/github/stars/KellanStevens/Kellans-Scripts.svg?style=for-the-badge
+[stars-url]: https://github.com/KellanStevens/Kellans-Scripts/stargazers
+[issues-shield]: https://img.shields.io/github/issues/KellanStevens/Kellans-Scripts.svg?style=for-the-badge
+[issues-url]: https://github.com/KellanStevens/Kellans-Scripts/issues
 [twitter-shield]: https://img.shields.io/twitter/follow/stevenskellan?style=for-the-badge
 [twitter-url]: https://twitter.com/stevenskellan/
 [license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/Kellan2002/Kellans-Scripts/blob/main/LICENSE
+[license-url]: https://github.com/KellanStevens/Kellans-Scripts/blob/main/LICENSE
