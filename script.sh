@@ -152,7 +152,10 @@ defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock ;
 printf -- "\e[2m - Process (11/12)\n";
 defaults write com.apple.dock autohide-delay -float 0; killall Dock;
 printf -- "\e[2m - Process (12/12)\n";
-
+defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true" 
+defaults write com.apple.dock "enable-spring-load-actions-on-all-items" -bool "true" && killall Dock
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
+defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
 printf -- '\n';
 printf -- '\033[32m Finished!'
 exit 0;
