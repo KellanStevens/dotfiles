@@ -25,10 +25,6 @@ _start=1
 
 printf -- "\033[37m Hello welcome to Kellan's bash script for bootstrapping MacOS \033[0m\n"
 
-flag=true
-
-
-
 while true; do # Only breaks out of while loop once user chooses y/Y or n/N
   echo
   read -n1 -p "Would you like to use this repo's zsh config? Yes[y]/No[n] " zshrc_config
