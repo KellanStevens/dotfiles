@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Rrerequisites:
+# xcode command line tools installed ```xcode-select install``` + ```sudo xcodebuild -license accept```
+# homebrew installed ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"````
+
 # Input is currentState($1) and totalState($2)
 function ProgressBar {
 # Process data
@@ -23,44 +28,6 @@ printf -- "\033[37m Hello welcome to Kellan's bash script for bootstrapping MacO
 flag=true
 
 
-xcode-select -p 1>/dev/null;xcode_installed=$?
-if [ $xcode_installed -ne 0 ]; then
-  while true; do
-  read -n1 -p "Apple's command line tools (xcode-select) is not installed, would you like to install it? Yes[y]/No[n] " xcode_install
-    case $xcode_install in  # case statement checking userinput for var $xcode_installed  
-      y|Y) 
-          echo ;
-          echo "You can go forward";
-          break;;
-      n|N) 
-          echo;
-          printf -- "\033[31m Please run 'xcode-select install', then try running this script again \033[0m\n";
-          exit;;
-      *)  
-          echo;
-          printf "\033[31m Please enter 'y' for Yes or 'n' for No \033[0m\n";;
-    esac
-  done
-fi
-
-# while true; do  # Only breaks out of while loop once user chooses y/Y or n/N
-#   echo
-#   read -n1 -p "Have you installed Apple's command line tools (xcode-select)? Yes[y]/No[n]" xcode_installed
-
-#   case $xcode_installed in  # case statement checking userinput for var $xcode_installed  
-#     y|Y) 
-#         echo ;
-#         echo "You can go forward";
-#         break;;
-#     n|N) 
-#         echo;
-#         printf -- "\033[31m Please run 'xcode-select install', then try running this script again \033[0m\n";
-#         exit;;
-#     *)  
-#         echo;
-#         printf "\033[31m Please enter 'y' for Yes or 'n' for No \033[0m\n";;
-#     esac
-# done
 
 while true; do # Only breaks out of while loop once user chooses y/Y or n/N
   echo
