@@ -180,6 +180,7 @@ defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true"
 defaults write com.apple.dock "enable-spring-load-actions-on-all-items" -bool "true" && killall Dock
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
 defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
+defaults write com.apple.dock persistent-apps -array && killall Dock
 printf -- '\n';
 printf -- '\033[32m Finished!'
 exit 0;
