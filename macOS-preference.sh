@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Create an empty file called ".hushlogin" in the user's home directory to suppress the login banner message
+touch ~/.hushlogin
+
 # Set Dock to automatically hide when not in use
 defaults write com.apple.dock "autohide" -bool "true"
 
