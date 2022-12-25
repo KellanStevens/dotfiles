@@ -10,3 +10,8 @@
 </p>
 
 
+- XCode command line tools installed 
+  - ```xcode-select --install```
+  - ```sudo xcodebuild -license accept```
+- Homebrew installed
+ - ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
