@@ -1,9 +1,0 @@
-[user]
-	name = Kellan2002
-	email = 45543616+Kellan2002@users.noreply.github.com
-[init]
-	defaultBranch = "Kellan's-Scripts"
-[core]
-	editor = hx
-[core]
-	editor = code --wait
