@@ -4,6 +4,6 @@
 [init]
 	defaultBranch = "Kellan's-Scripts"
 [core]
-	editor = nano
+	editor = hx
 [core]
 	editor = code --wait
