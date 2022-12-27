@@ -54,5 +54,11 @@ defaults write com.apple.dock "mru-spaces" -bool "false"
 # Reset the Dock to the default set of persistent (pinned) apps
 defaults write com.apple.dock persistent-apps -array
 
+# This command sets the number of rows on the Launchpad (the screen with app icons) to 5.
+defaults write com.apple.dock springboard-rows -int 5
+
+# This command sets the number of columns on the Launchpad (the screen with app icons) to 5.
+defaults write com.apple.dock springboard-columns -int 9
+
 # Restart Dock, Finder, and System UI Server processes to apply changes
 killall Dock Finder SystemUIServer
