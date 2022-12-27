@@ -60,5 +60,11 @@ defaults write com.apple.dock springboard-rows -int 5
 # This command sets the number of columns on the Launchpad (the screen with app icons) to 5.
 defaults write com.apple.dock springboard-columns -int 9
 
+# This command enables the Path bar in Finder
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+
+# This command enables the display of hard drives on the desktop in Finder
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true" && killall Finder
+
 # Restart Dock, Finder, and System UI Server processes to apply changes
 killall Dock Finder SystemUIServer
