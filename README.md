@@ -5,7 +5,7 @@
   <h3 align="center">Kellan's Dotfiles</h3>
 
   <p align="center">
-    This repo includes the dotfiles for Kellan's macOS/unix setup
+    This repo includes the dotfiles for Kellan's setup
   </p>
 </p>
 
