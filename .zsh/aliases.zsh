@@ -12,4 +12,6 @@ alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 alias pest='./vendor/bin/pest'
 
+alias sniff='vendor/bin/phpcs --standard=PSR12 app' 
+
 alias pa='php artisan'
