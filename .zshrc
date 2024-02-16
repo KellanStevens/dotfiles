@@ -2,7 +2,7 @@
 [[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
 
 export STARSHIP_CONFIG=~/.config/starship.toml
-export EDITOR=helix
+export EDITOR=vim
 
 eval "$(starship init zsh)"
 
