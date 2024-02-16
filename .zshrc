@@ -6,4 +6,4 @@ export EDITOR=helix
 
 eval "$(starship init zsh)"
 
-SPACESHIP_PROMPT_ASYNC=FALSEexport PATH="/usr/local/sbin:$PATH
+SPACESHIP_PROMPT_ASYNC=FALSEexport PATH="/usr/local/sbin:$PATH"
