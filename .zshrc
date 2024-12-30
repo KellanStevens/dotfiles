@@ -10,13 +10,5 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-case "$TERM_PROGRAM" in (WarpTerminal|iTerm.app|Apple_Terminal)
-  fastfetch ;;
-esac
-
-bindkey -e
-
-bindkey '\e\e[C' forward-word
-bindkey '\e\e[D' backward-word
-
-if [ "$TMUX" = "" ]; then tmux; fi
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
