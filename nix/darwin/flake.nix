@@ -1,1 +1,0 @@
-/Users/kellan/.config/nix/flake.nix
