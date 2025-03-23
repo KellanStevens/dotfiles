@@ -12,6 +12,7 @@
     "nvm"
     "oh-my-posh"
     "ollama"
+    "pam-reattach"
     "php@8.1"
     "php-cs-fixer"
     "poetry"
