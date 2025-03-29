@@ -63,5 +63,9 @@
     };
   };
 
-  security.pam.services.sudo_local.touchIdAuth = true;
+  # Hardcode desired pam.d/sudo_local content
+  environment.etc."pam.d/sudo_local".text = ''
+    auth       optional       /opt/homebrew/lib/pam/pam_reattach.so ignore_ssh # touchID sudo in tmux
+    auth       sufficient     pam_tid.so # touchID sudo
+  '';
 }
