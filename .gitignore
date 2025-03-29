@@ -103,3 +103,6 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/macos,vim,windows,visualstudiocode
 
 **/AppSupport
+/.config/composer
+/.config/gh
+/.config/raycast/extensions
