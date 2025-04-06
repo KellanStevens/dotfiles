@@ -4,7 +4,6 @@
     "android-studio"
     "appcleaner"
     "arc"
-    "aerospace"
     "browserstacklocal"
     "coconutbattery"
     "cyberduck"
