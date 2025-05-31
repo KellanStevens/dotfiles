@@ -4,17 +4,13 @@
   inputs = {
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     darwin = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:LnL7/nix-darwin";
     };
   };
 
-  outputs = inputs@{ self, darwin, nixpkgs, nix-homebrew, home-manager }:
+  outputs = inputs@{ self, darwin, nixpkgs, nix-homebrew }:
   let
     configuration = { pkgs, config, ... }: {
       # Import Homebrew & System configuration
@@ -68,13 +64,6 @@
             autoMigrate = true;
           };
         }
-        home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.kellan = import ./home.nix;
-            home-manager.backupFileExtension = "backup";
-          }
       ];
     };
 
