@@ -1,5 +1,9 @@
 { pkgs, config, lib, ... }:
 
+let
+  shiftModifier = 131072;  # shift as modifier key
+  topLeftHotCorner = 10;   # top left hot corner action
+in
 {
   system.defaults = {
     dock = {
@@ -41,8 +45,8 @@
       };
 
       "com.apple.Dock" = {
-        wvous-tl-modifier = 131072; # shift as modifier key
-        wvous-tl-corner = 10; # top left hot corner
+        wvous-tl-modifier = shiftModifier;
+        wvous-tl-corner = topLeftHotCorner;
       };
 
       "com.apple.desktopservices" = {
