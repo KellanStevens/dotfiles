@@ -9,8 +9,6 @@ export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/php@8.1/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/php@8.1/include"
 
-export EDITOR=nvim
-
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export PATH="/Users/kellan/stack/.bin:$PATH"
