@@ -1,8 +1,6 @@
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/keybindings.zsh ]] && source ~/.zsh/keybindings.zsh
 
-export EDITOR=nvim
-
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export PATH="/Users/kellan/stack/.bin:$PATH"
