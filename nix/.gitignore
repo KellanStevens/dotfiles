@@ -1,6 +1,0 @@
-.DS_Store
-.config/*
-!.config/fastfetch
-!.config/ohmyposh
-!.config/vscode
-!.config/zsh
