@@ -2,6 +2,7 @@
 [[ -f ~/.zsh/keybindings.zsh ]] && source ~/.zsh/keybindings.zsh
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
