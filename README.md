@@ -1,17 +1,7 @@
-<p align="center">
-  <a href="https://github.com/KellanStevens/Kellans-Scripts"
-  >
-  </a>
-  <h3 align="center">Kellan's Dotfiles</h3>
+# Kellan's Dotfiles
 
-  <p align="center">
-    This repo includes the dotfiles for Kellan's setup
-  </p>
-</p>
+This repo includes the dotfiles for Kellan's setup
 
-
-- XCode command line tools installed 
-  - ```xcode-select --install```
-  - ```sudo xcodebuild -license accept```
-- Homebrew installed
-  - ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+```bash
+curl -fsSL https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/setup.sh | bash
+```
