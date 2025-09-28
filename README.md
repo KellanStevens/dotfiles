@@ -3,5 +3,5 @@
 This repo includes the dotfiles for Kellan's setup
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/setup.sh | bash
+curl -fsSL https://setup.kellanstevens.com | bash
 ```
