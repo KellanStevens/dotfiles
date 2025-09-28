@@ -122,7 +122,6 @@ apply_macos_preferences() {
 setup_zsh_config() {
     log_info "Setting up zsh configuration..."
 
-    # Download the .zshrc from the repository
     ZSHRC_URL="https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.zshrc"
     ZSHRC_PATH="/tmp/.zshrc"
 
@@ -142,11 +141,9 @@ setup_zsh_config() {
         exit 1
     fi
 
-    # Create .zsh directory structure
     log_info "Creating .zsh directory structure..."
     mkdir -p "$HOME/.zsh"
 
-    # Download aliases.zsh from the repository
     ALIASES_URL="https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.zsh/aliases.zsh"
     ALIASES_PATH="/tmp/aliases.zsh"
 
@@ -162,7 +159,6 @@ setup_zsh_config() {
         log_warning "Failed to download aliases.zsh, skipping..."
     fi
 
-    # Download keybindings.zsh from the repository
     KEYBINDINGS_URL="https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.zsh/keybindings.zsh"
     KEYBINDINGS_PATH="/tmp/keybindings.zsh"
 
@@ -178,12 +174,32 @@ setup_zsh_config() {
         log_warning "Failed to download keybindings.zsh, skipping..."
     fi
 
-    # Clean up temporary files
     rm -f "$ALIASES_PATH" "$KEYBINDINGS_PATH"
 
     rm -f "$ZSHRC_PATH"
 
     log_success "zsh configuration setup completed"
+}
+
+setup_config_files() {
+    log_info "Setting up configuration files..."
+
+    log_info "Creating .config directory structure..."
+    mkdir -p "$HOME/.config"
+
+    log_info "Downloading configuration files..."
+
+    mkdir -p "$HOME/.config/cursor"
+    curl -fsSL "https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.config/cursor/settings.json" -o "$HOME/.config/cursor/settings.json" && log_success "Cursor settings.json installed" || log_warning "Failed to install Cursor settings.json"
+    curl -fsSL "https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.config/cursor/extensions.sh" -o "$HOME/.config/cursor/extensions.sh" && log_success "Cursor extensions.sh installed" || log_warning "Failed to install Cursor extensions.sh"
+
+    mkdir -p "$HOME/.config/fastfetch"
+    curl -fsSL "https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.config/fastfetch/config.jsonc" -o "$HOME/.config/fastfetch/config.jsonc" && log_success "Fastfetch config.jsonc installed" || log_warning "Failed to install Fastfetch config.jsonc"
+
+    mkdir -p "$HOME/.config/ohmyposh"
+    curl -fsSL "https://raw.githubusercontent.com/KellanStevens/dotfiles/HEAD/.config/ohmyposh/config.toml" -o "$HOME/.config/ohmyposh/config.toml" && log_success "Oh My Posh config.toml installed" || log_warning "Failed to install Oh My Posh config.toml"
+
+    log_success "Configuration files setup completed"
 }
 
 main() {
@@ -192,20 +208,23 @@ main() {
 
     check_macos
 
-    log_info "Step 1/5: Installing Rosetta 2 (if needed)..."
+    log_info "Step 1/6: Installing Rosetta 2 (if needed)..."
     install_rosetta
 
-    log_info "Step 2/5: Installing Homebrew..."
+    log_info "Step 2/6: Installing Homebrew..."
     install_homebrew
 
-    log_info "Step 3/5: Installing packages from Brewfile..."
+    log_info "Step 3/6: Installing packages from Brewfile..."
     install_from_brewfile
 
-    log_info "Step 4/5: Applying macOS preferences..."
+    log_info "Step 4/6: Applying macOS preferences..."
     apply_macos_preferences
 
-    log_info "Step 5/5: Setting up zsh configuration..."
+    log_info "Step 5/6: Setting up zsh configuration..."
     setup_zsh_config
+
+    log_info "Step 6/6: Setting up configuration files..."
+    setup_config_files
 
     echo "========================================"
     log_success "Setup completed successfully!"
@@ -216,6 +235,7 @@ main() {
     echo "  ✓ All packages from Brewfile"
     echo "  ✓ macOS preferences applied"
     echo "  ✓ zsh configuration installed"
+    echo "  ✓ Configuration files (Cursor, Fastfetch, Oh My Posh)"
     echo ""
     log_info "Please restart your terminal or run 'source ~/.zshrc' to use Homebrew commands"
 }
